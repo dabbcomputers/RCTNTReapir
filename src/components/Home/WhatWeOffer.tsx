@@ -1,25 +1,13 @@
-// ─── Content ─────────────────────────────────────────────────────────────────
-//
-// Note: the reference says "New York" here but "San Diego" in the hero. That
-// wording is kept exactly as designed rather than quietly corrected.
-
 const heading = {
-  eyebrow: 'What we offer',
-  title: 'Effective flatbed transportation',
+  eyebrow: 'Our services',
+  title: 'Truck & trailer repair specialists',
 }
 
-const body =
-  'We provide fast, courteous and inexpensive towing services in New York. We are fully insured and been in business since 1986. We are ready to respond to all your vehicle emergency needs 24 hours a day, seven days a week.'
-
-const bullets = [
-  'More than 30 years of experience',
-  'Short arrival time of 30 minutes or less',
-  'Honest competitive prices - zero hidden fees',
-  'Friendly and professional service',
-  'Available 24 hours a day, 7 days a week',
-]
-
-/** Image supplied by the client — see public/assets/images/. */
+/**
+ * ── ASSET SLOT ──────────────────────────────────────────────────────────────
+ * Photo on the left of this section.
+ * Put the file at: public/assets/images/we-offer-left.png (already supplied)
+ */
 const offerImage = '/assets/images/we-offer-left.png'
 
 // ─── Icon used only here ─────────────────────────────────────────────────────
@@ -41,6 +29,19 @@ function CheckIcon({ className = 'h-4 w-4' }: { className?: string }) {
     </svg>
   )
 }
+
+// ─── Content ─────────────────────────────────────────────────────────────────
+
+const body =
+  'Royal Canadian Truck & Trailer Repairs has spent 10+ years keeping trucks and trailers on the road. From DPF and SCR systems to full engine diagnostics, brakes and tyres, we work on all makes with honest, upfront pricing.'
+
+const bullets = [
+  '10+ years of expert truck & trailer service',
+  'DPF and SCR system specialists',
+  'Engine diagnostics & repairs',
+  'On-site repair service',
+  'Honest pricing — zero hidden fees',
+]
 
 // ─── Section ─────────────────────────────────────────────────────────────────
 

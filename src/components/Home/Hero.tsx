@@ -1,17 +1,20 @@
 // ─── Content ─────────────────────────────────────────────────────────────────
 
 const hero = {
-  eyebrow: 'We provide highest quality',
-  title: 'Towing services',
-  subtitle: 'Fast, courteous and inexpensive towing and roadside assistance in San Diego.',
+  eyebrow: 'Truck & trailer mechanics',
+  title: 'DPF, SCR & engine specialists',
+  subtitle:
+    '10+ years of expert service on DPF and SCR systems, engines, brakes and complete truck & trailer repairs.',
   scrollLabel: 'Scroll',
-  leftHighlight: 'Less than 30 min arrival',
-  rightHighlight: 'Live 24/7 towing service',
+  leftHighlight: '10+ years of expert service',
+  rightHighlight: 'DPF · SCR · Engines',
 }
 
+// Contact details as published on the business's Instagram bio
+// (@rc_truckrepairs): phone 647-914-9423, located in the GTA.
 const brand = {
-  phone: '0 (800) 490 45 45',
-  phoneHref: 'tel:+18004904545',
+  phone: '647-914-9423',
+  phoneHref: 'tel:+16479149423',
 }
 
 // ─── Icon used only here ─────────────────────────────────────────────────────
@@ -36,10 +39,8 @@ function PhoneIcon({ className = 'h-5 w-5' }: { className?: string }) {
 
 // ─── ASSET SLOT ──────────────────────────────────────────────────────────────
 // Background photo behind the headline.
-// Put the file at: src/assets/images/hero.jpg
-// then uncomment the import and set heroImage to it.
-//
-//   import heroImage from '../../assets/images/hero.jpg'
+// Put the file at: public/assets/images/hero.jpg
+// then set heroImage to '/assets/images/hero.jpg'.
 const heroImage = ''
 
 /**

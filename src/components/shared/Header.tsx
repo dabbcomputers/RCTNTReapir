@@ -4,8 +4,8 @@ import { Link, NavLink } from 'react-router-dom'
 // ─── Brand + navigation ──────────────────────────────────────────────────────
 
 const brand = {
-  name: '24/7 Towy',
-  tagline: 'Towing Services',
+  name: 'Royal Canadian Truck & Trailer Repairs Inc.',
+  tagline: 'Truck & Trailer Mechanics',
 }
 
 /**

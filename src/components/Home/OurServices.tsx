@@ -2,7 +2,7 @@
 
 const heading = {
   eyebrow: 'Our services',
-  title: 'Emergency roadside assistance',
+  title: 'Truck & trailer repair specialists',
 }
 
 // ─── Icon sizing ─────────────────────────────────────────────────────────────
@@ -17,13 +17,13 @@ const heading = {
 // render derives the display size from them so every icon's artwork ends up the
 // same width and optically centred.
 //
-//   file                canvas    ink box (x,y,w,h)      pad L/R/T/B
-//   car-towing          370x370   11, 70, 340, 280        11/19/70/20
-//   accident-insurance  388x362   22, 22, 324, 309        22/42/22/31
-//   hail-damage         400x370   21, 20, 358, 332        21/21/20/18
-//   fire-insurance      378x371   10, 22, 354, 331        10/14/22/18
-//   flood-insurance     370x363   19, 60, 316, 279        19/35/60/24
-//   motorcycle-towing   434x349   10, 68, 405, 265        10/19/68/16
+//   file                      canvas    ink box (x,y,w,h)      pad L/R/T/B
+//   on-site-repairs           526x409   3, 85, 508, 305         3/15/85/19
+//   engine-diagnostic         470x377   22, 70, 415, 286        22/33/70/21
+//   brake-service             427x398   18, 37, 385, 340        18/24/37/21
+//   tire-repair               433x428   31, 59, 378, 357        31/24/59/12
+//   preventive-maintenance    503x417   16, 98, 469, 290        16/18/98/29
+//   miscellaneous             431x392   14, 38, 402, 330        14/15/38/24
 
 /** Width the visible artwork is normalised to, in px. */
 const ICON_INK_WIDTH = 64
@@ -46,40 +46,64 @@ type Service = {
 
 const services: Service[] = [
   {
-    title: 'Car Towing',
-    icon: { src: '/assets/icons/car-towing.png', canvas: [370, 370], ink: [11, 70, 340, 280] },
+    title: 'On-Site Repairs',
+    icon: {
+      src: '/assets/icons/on-site-repairs.png',
+      canvas: [526, 409],
+      ink: [3, 85, 508, 305],
+    },
     description:
       'Duis laboris ball tip jowl sed. Drumstick leberkas tenderloin swine laborum cupim bacon ipsum jowl meatball t-bone.',
   },
   {
-    title: 'Accident Insurance',
-    icon: { src: '/assets/icons/accident-insurance.png', canvas: [388, 362], ink: [22, 22, 324, 309] },
+    title: 'Engine Diagnostic',
+    icon: {
+      src: '/assets/icons/engine-diagnostic.png',
+      canvas: [470, 377],
+      ink: [22, 70, 415, 286],
+    },
     description:
-      'T-bone laborum esse tongue, consequat elit short ribs cow cupidatat sed fugiat fatback. Velit dolor frankfurter pork loin.',
+      'Bresaola pork consequat exercitation, voluptate pork loin brisket capicola officia incididunt ground round cupim.',
   },
   {
-    title: 'Hail Damage',
-    icon: { src: '/assets/icons/hail-damage.png', canvas: [400, 370], ink: [21, 20, 358, 332] },
-    description:
-      'Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.',
-  },
-  {
-    title: 'Fire Insurance',
-    icon: { src: '/assets/icons/fire-insurance.png', canvas: [378, 371], ink: [10, 22, 354, 331] },
+    title: 'Brake Service',
+    icon: {
+      src: '/assets/icons/brake-service.png',
+      canvas: [427, 398],
+      ink: [18, 37, 385, 340],
+    },
     description:
       'Turkey turducken nulla pork chop shankle biltong ipsum mollit brisket non boudin. Frankfurter porchetta cow aliquip.',
   },
   {
-    title: 'Flood Insurance Coverage',
-    icon: { src: '/assets/icons/flood-insurance.png', canvas: [370, 363], ink: [19, 60, 316, 279] },
+    title: 'Tire Repair and Replacement',
+    icon: {
+      src: '/assets/icons/tire-repair.png',
+      canvas: [433, 428],
+      ink: [31, 59, 378, 357],
+    },
     description:
       'Shankle pastrami jerky spare ribs pancetta hamburger aute occaecat andouille corned beef quis capicola fugiat ea flank.',
   },
   {
-    title: 'Motorcycle Towing',
-    icon: { src: '/assets/icons/motorcycle-towing.png', canvas: [434, 349], ink: [10, 68, 405, 265] },
+    title: 'Preventive Maintenance',
+    icon: {
+      src: '/assets/icons/preventive-maintenance.png',
+      canvas: [503, 417],
+      ink: [16, 98, 469, 290],
+    },
     description:
-      'Bresaola pork consequat exercitation, voluptate pork loin brisket capicola officia incididunt ground round cupim.',
+      'T-bone laborum esse tongue, consequat elit short ribs cow cupidatat sed fugiat fatback. Velit dolor frankfurter pork loin.',
+  },
+  {
+    title: 'Miscellaneous',
+    icon: {
+      src: '/assets/icons/miscellaneous.png',
+      canvas: [431, 392],
+      ink: [14, 38, 402, 330],
+    },
+    description:
+      'Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.',
   },
 ]
 

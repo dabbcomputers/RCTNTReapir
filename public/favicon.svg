@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Royal Canadian Truck &amp; Trailer Repairs">
+  <!--
+    Truck + wrench mark, drawn in the site's own palette so it matches the
+    header/footer (dark surface) and the accent used across the design.
+
+      tile   #1d1d1d  (site --color-background)
+      accent #ffc329  (site --color-primary)
+  -->
+  <rect width="64" height="64" rx="14" fill="#1d1d1d"/>
+
+  <!-- Truck -->
+  <g fill="#ffc329">
+    <rect x="6" y="23" width="28" height="16" />
+    <path d="M36.5 28.5h7.1l6.9 8.2V39H36.5z" />
+    <circle cx="15.5" cy="41.5" r="5" />
+    <circle cx="42.5" cy="41.5" r="5" />
+  </g>
+  <g fill="#1d1d1d">
+    <circle cx="15.5" cy="41.5" r="2" />
+    <circle cx="42.5" cy="41.5" r="2" />
+  </g>
+
+  <!--
+    Wrench crossing the truck. Drawn twice: a wide dark pass first, then the
+    gold pass on top. The dark pass is what keeps the wrench readable where it
+    overlaps the gold truck body (it reads as an outline), and it disappears
+    into the tile everywhere else.
+  -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" transform="rotate(-38 32 32)">
+    <path d="M25 15a10 10 0 1 1 14 0M32 32v19" stroke="#1d1d1d" stroke-width="9" />
+    <path d="M25 15a10 10 0 1 1 14 0M32 32v19" stroke="#ffc329" stroke-width="5" />
+  </g>
+</svg>

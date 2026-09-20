@@ -1,10 +1,15 @@
 // ─── Content ─────────────────────────────────────────────────────────────────
+//
+// Capability figures rather than invented counts. The design's original stats
+// were template filler ("74 Offices Worldwide", "3720 Vehicles Towed") which
+// would have been made up for a single-shop business. The only figure stated by
+// the client is "10+ years", so the rest describe what the shop does instead.
 
 const stats = [
-  { value: '30', label: 'Years of Experience' },
-  { value: '74', label: 'Offices Worldwide' },
-  { value: '3720', label: 'Vehicles Towed' },
-  { value: '874', label: 'Workers in Team' },
+  { value: '10+', label: 'Years of Expert Service' },
+  { value: 'DPF/SCR', label: 'Systems Specialists' },
+  { value: 'Engines', label: 'Diagnostics & Repair' },
+  { value: 'On-Site', label: 'Repair Service' },
 ]
 
 /** Background supplied by the client — see public/assets/images/. */
