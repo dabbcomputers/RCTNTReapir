@@ -1,7 +1,6 @@
-import Contact from '../components/Home/Contact'
 import Faq from '../components/Home/Faq'
 import Hero from '../components/Home/Hero'
-import MapSection from '../components/Home/MapSection'
+import HomeCta from '../components/Home/HomeCta'
 import OurServices from '../components/Home/OurServices'
 import Stats from '../components/Home/Stats'
 import Testimonials from '../components/Home/Testimonials'
@@ -26,9 +25,9 @@ export default function Home() {
         <Stats />
         <WhatWeOffer />
         <Testimonials />
-        <Faq />
         <ContactSection />
-        <MapSection />
+        <HomeCta />
+        <Faq />
       </main>
 
       <Footer />

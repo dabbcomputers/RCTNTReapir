@@ -50,16 +50,14 @@ const ctaImage = ''
 /**
  * Click-to-call band sitting between the contact section and the footer.
  *
- * This file used to render the Google map. It was converted to a call-to-action
- * at the client's request. The name is kept as MapSection so that nothing
- * outside this file has to change — rename it to CallToAction.tsx (and the
- * import in src/pages/Home.tsx) whenever you want the name to match.
+ * This file used to be MapSection.tsx and render the Google map; it was
+ * converted to a call-to-action and renamed to HomeCta at the client's request.
  *
  * Deliberately dark rather than gold: the contact band directly above ends in a
  * gold panel, so a gold band here would merge with it. Dark also keeps the
  * single gold call button as the only thing the eye lands on.
  */
-export default function MapSection() {
+export default function HomeCta() {
   return (
     <section id="call-us" className="bg-background-deep relative isolate overflow-hidden">
       {ctaImage ? (
