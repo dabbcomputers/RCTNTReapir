@@ -19,15 +19,50 @@ const heading = {
 const mapEmbedUrl = 'https://www.google.com/maps?q=43.4510659,-80.4009931&z=16&output=embed'
 const mapLink = 'https://maps.app.goo.gl/MgwERvr9Meknje3bA'
 
-const form = {
+type ContactField = {
+  name: string
+  label: string
+  /** One of the <input type> values, or 'textarea' for the multi-line field. */
+  type: 'text' | 'tel' | 'email' | 'date' | 'textarea'
+  required: boolean
+  /** Set only where the value is a real HTML autocomplete token. */
+  autoComplete?: string
+  placeholder?: string
+}
+
+const form: { name: string; submitLabel: string; fields: ContactField[] } = {
   /** Must match the form name declared in public/__forms.html */
   name: 'contact',
   submitLabel: 'Send message',
+  /**
+   * Render order, and the order the fields arrive in the email Netlify sends.
+   * `required` drives both the browser's own validation and the asterisk beside
+   * the label, so the two can never drift apart.
+   *
+   * Every `name` here must also appear on the matching <form> in
+   * public/__forms.html, or Netlify silently drops that field from the
+   * submission. Keep the two lists in step.
+   */
   fields: [
-    { name: 'name', label: 'Name', type: 'text', required: true },
-    { name: 'email', label: 'Email', type: 'email', required: true },
-    { name: 'phone', label: 'Phone', type: 'tel', required: false },
-    { name: 'message', label: 'Message', type: 'textarea', required: true },
+    { name: 'name', label: 'Name', type: 'text', required: true, autoComplete: 'name' },
+    { name: 'phone', label: 'Phone', type: 'tel', required: true, autoComplete: 'tel' },
+    { name: 'email', label: 'Email', type: 'email', required: false, autoComplete: 'email' },
+    {
+      name: 'vehicleType',
+      label: 'Vehicle Type',
+      type: 'text',
+      required: true,
+      placeholder: 'e.g. 2019 Peterbilt 579',
+    },
+    {
+      name: 'serviceRequired',
+      label: 'Service Required',
+      type: 'text',
+      required: true,
+      placeholder: 'e.g. Brake service, DPF fault',
+    },
+    { name: 'preferredDate', label: 'Preferred Date', type: 'date', required: false },
+    { name: 'message', label: 'Message', type: 'textarea', required: false },
   ],
 }
 
@@ -110,6 +145,11 @@ function ContactForm() {
           >
             <label htmlFor={`contact-${field.name}`} className="text-background-deep/70 text-xs tracking-wide">
               {field.label}
+              {field.required && (
+                <span aria-hidden="true" className="text-primary-strong ml-1">
+                  *
+                </span>
+              )}
             </label>
 
             {field.type === 'textarea' ? (
@@ -118,6 +158,7 @@ function ContactForm() {
                 name={field.name}
                 rows={5}
                 required={field.required}
+                placeholder={field.placeholder}
                 className={`${fieldClass} resize-y`}
               />
             ) : (
@@ -126,7 +167,8 @@ function ContactForm() {
                 name={field.name}
                 type={field.type}
                 required={field.required}
-                autoComplete={field.name === 'email' ? 'email' : field.name}
+                autoComplete={field.autoComplete}
+                placeholder={field.placeholder}
                 className={fieldClass}
               />
             )}

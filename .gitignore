@@ -6,5 +6,10 @@ dist-ssr
 .DS_Store
 .vite
 
-# Reasonix per-turn clipboard attachments — not project source
-.reasonix/attachments
+# Reasonix agent state — local session logs, the approved-command allowlist and
+# pasted clipboard images. This is machine-local tooling, not project source: it
+# churns on every session (and reasonix.toml hardcodes an absolute path), so it
+# stays out of the repo. Previously only .reasonix/attachments was ignored here,
+# which is how .reasonix/tasks ended up tracked.
+.reasonix/
+reasonix.toml

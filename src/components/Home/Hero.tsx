@@ -56,11 +56,11 @@ function ChevronDownIcon({ className = 'h-5 w-5' }: { className?: string }) {
   )
 }
 
-// ─── ASSET SLOT ──────────────────────────────────────────────────────────────
-// Background photo behind the headline.
-// Put the file at: public/assets/images/hero.jpg
-// then set heroImage to '/assets/images/hero.jpg'.
-const heroImage = ''
+// ─── Background ──────────────────────────────────────────────────────────────
+// The design puts no photo behind the headline, so the hero paints its own
+// gradient. To add one later: drop the file at public/assets/images/hero.jpg and
+// render an <img src="/assets/images/hero.jpg" alt="" className="absolute
+// inset-0 -z-10 h-full w-full object-cover" /> in place of the gradient div.
 
 /**
  * Full-bleed dark hero: split headline (light first line, accent second line),
@@ -73,15 +73,10 @@ export default function Hero() {
       id="home"
       className="bg-background-deep relative isolate flex min-h-[560px] flex-col justify-center overflow-hidden pt-24 lg:min-h-[688px]"
     >
-      {/* Background: the photo once supplied, a gradient until then. */}
-      {heroImage ? (
-        <img src={heroImage} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
-      ) : (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,#2b2b2b_0%,#1d1d1d_38%,#111111_100%)]"
-        />
-      )}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,#2b2b2b_0%,#1d1d1d_38%,#111111_100%)]"
+      />
 
       <div className="mx-auto flex w-full max-w-[var(--container-width)] flex-1 flex-col items-center justify-center px-5 text-center sm:px-8">
         <h1 className="max-w-4xl">

@@ -1,12 +1,17 @@
 <!doctype html>
 <!--
-  Static form skeletons for Netlify's build-time form detection.
+  Static form skeleton for Netlify's build-time form detection.
 
-  Netlify parses the DEPLOYED HTML, but this site's forms are rendered
-  client-side by React, so they are invisible to that scan. This file is not
-  linked from anywhere and is never shown to a user; it exists only so the
-  build discovers each form name together with its field names. Submissions
-  themselves are sent from JS with fetch (see src/lib/netlifyForms.ts).
+  Netlify parses the DEPLOYED HTML, but this site's form is rendered
+  client-side by React, so it is invisible to that scan. This file is not linked
+  from anywhere and is never shown to a user; it exists only so the build
+  discovers the form name together with its field names. The submission itself
+  is sent from React with fetch — see src/components/Contact/ContactSection.tsx.
+
+  IMPORTANT: the field names below must match the `fields` list in
+  ContactSection.tsx exactly. Netlify DROPS any posted field it did not see
+  declared here. Note also that Netlify does not enforce `required` — that is
+  the browser's job — so this file is only about discovery, not validation.
 -->
 <html lang="en">
   <head>
@@ -14,23 +19,15 @@
     <title>Form definitions</title>
   </head>
   <body hidden>
-    <form name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field">
-      <input type="hidden" name="form-name" value="quote-request" />
-      <input name="bot-field" />
-      <input name="fullName" />
-      <input name="phone" />
-      <input name="towFrom" />
-      <input name="towTo" />
-      <input name="vehicleType" />
-      <input name="date" />
-    </form>
-
     <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="contact" />
       <input name="bot-field" />
       <input name="name" />
-      <input name="email" />
       <input name="phone" />
+      <input name="email" />
+      <input name="vehicleType" />
+      <input name="serviceRequired" />
+      <input name="preferredDate" />
       <textarea name="message"></textarea>
     </form>
   </body>

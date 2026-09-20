@@ -38,12 +38,11 @@ function PhoneIcon({ className = 'h-6 w-6' }: { className?: string }) {
   )
 }
 
-// ─── ASSET SLOT ──────────────────────────────────────────────────────────────
-// Optional background photo (a truck or workshop shot works well here).
-// Put the file at: public/assets/images/cta-bg.jpg
-// then set ctaImage to '/assets/images/cta-bg.jpg'. Until then a gradient is
-// used, which is why this band needs no image to look finished.
-const ctaImage = ''
+// ─── Background ──────────────────────────────────────────────────────────────
+// A gradient, not a photo — this band needs no image to look finished. To add
+// one: drop it at public/assets/images/cta-bg.jpg and render an <img
+// src="/assets/images/cta-bg.jpg" alt="" className="absolute inset-0 -z-10
+// h-full w-full object-cover" /> in place of the gradient div.
 
 // ─── Section ─────────────────────────────────────────────────────────────────
 
@@ -60,14 +59,10 @@ const ctaImage = ''
 export default function HomeCta() {
   return (
     <section id="call-us" className="bg-background-deep relative isolate overflow-hidden">
-      {ctaImage ? (
-        <img src={ctaImage} alt="" className="absolute inset-0 -z-10 h-full w-full object-cover" />
-      ) : (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,#2b2b2b_0%,#1d1d1d_45%,#111111_100%)]"
-        />
-      )}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,#2b2b2b_0%,#1d1d1d_45%,#111111_100%)]"
+      />
 
       {/* Gold hairlines top and bottom frame the band against its neighbours. */}
       <div aria-hidden="true" className="bg-primary/60 absolute inset-x-0 top-0 h-px" />
