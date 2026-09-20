@@ -15,7 +15,7 @@ export default function About() {
       <Header />
 
       <main>
-        <PageTitle title="About" breadcrumb={['Home', 'Pages', 'About']} />
+        <PageTitle title="About" breadcrumb={['Home', 'About']} />
         <WhatWeOffer />
         <Testimonials />
         <Faq />

@@ -53,7 +53,7 @@ const services: Service[] = [
       ink: [3, 85, 508, 305],
     },
     description:
-      'Duis laboris ball tip jowl sed. Drumstick leberkas tenderloin swine laborum cupim bacon ipsum jowl meatball t-bone.',
+      'We come to you. Mobile truck and trailer repairs across the GTA, so you skip the downtime of getting to a shop.',
   },
   {
     title: 'Engine Diagnostic',
@@ -63,7 +63,7 @@ const services: Service[] = [
       ink: [22, 70, 415, 286],
     },
     description:
-      'Bresaola pork consequat exercitation, voluptate pork loin brisket capicola officia incididunt ground round cupim.',
+      'Full engine diagnostics and repairs, including DPF and SCR system faults. We find the real cause before we quote.',
   },
   {
     title: 'Brake Service',
@@ -73,7 +73,7 @@ const services: Service[] = [
       ink: [18, 37, 385, 340],
     },
     description:
-      'Turkey turducken nulla pork chop shankle biltong ipsum mollit brisket non boudin. Frankfurter porchetta cow aliquip.',
+      'Brake inspection, repair and replacement for trucks and trailers — safe stopping and compliance, done right.',
   },
   {
     title: 'Tire Repair and Replacement',
@@ -83,7 +83,7 @@ const services: Service[] = [
       ink: [31, 59, 378, 357],
     },
     description:
-      'Shankle pastrami jerky spare ribs pancetta hamburger aute occaecat andouille corned beef quis capicola fugiat ea flank.',
+      'Truck and trailer tire repair and replacement, including on-site fitment, so a blowout does not end your day.',
   },
   {
     title: 'Preventive Maintenance',
@@ -93,7 +93,7 @@ const services: Service[] = [
       ink: [16, 98, 469, 290],
     },
     description:
-      'T-bone laborum esse tongue, consequat elit short ribs cow cupidatat sed fugiat fatback. Velit dolor frankfurter pork loin.',
+      'Scheduled servicing that catches small faults early, cuts downtime and keeps your fleet road-ready.',
   },
   {
     title: 'Miscellaneous',
@@ -103,7 +103,7 @@ const services: Service[] = [
       ink: [14, 38, 402, 330],
     },
     description:
-      'Strip steak turkey prosciutto exercitation cillum elit. Enim ham velit aute jerky ras. Anim landjaeger andouille.',
+      'Anything else your truck or trailer needs — DPF and SCR cleaning, general repairs and odd jobs. Just ask.',
   },
 ]
 

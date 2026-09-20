@@ -1,10 +1,15 @@
 // ─── Content ─────────────────────────────────────────────────────────────────
-
+//
+// An owner's message rather than a customer review. Written by the business
+// owner in their own voice — deliberately NOT an invented customer testimonial,
+// since fabricated reviews would be misleading on a real business's site.
+//
+// Owner: Prabh Salhotra (supplied by the client).
 const testimonial = {
   quote:
-    'Meatloaf laborum velit kielbasa. Drumstick sirloin lorem chicken swine biltong in short ribs duis bresaola. Veniam meatloaf cow incididunt in bacon kevin in pork belly ball tip duis ipsum. Ribeye et aliquip strip steak dolore in anim. officia tongue bacon mollit esse. Ipsum deserunt salami jowl short ribs veniam.',
-  author: 'Curtis Harrington',
-  role: 'Manager',
+    'I have been repairing trucks and trailers for over 10 years, and I still stand behind every job that leaves the shop. Whether it is a DPF or SCR fault, an engine problem or a brake job, we diagnose it properly, explain what we found in plain language and fix it right the first time — no guesswork, no surprises.',
+  author: 'Prabh Salhotra',
+  role: 'Owner, Royal Canadian Truck & Trailer Repairs',
 }
 
 /** Background supplied by the client — see public/assets/images/. */

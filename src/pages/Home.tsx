@@ -8,7 +8,7 @@ import Testimonials from '../components/Home/Testimonials'
 import WhatWeOffer from '../components/Home/WhatWeOffer'
 import Footer from '../components/shared/Footer'
 import Header from '../components/shared/Header'
-
+import ContactSection from '../components/Contact/ContactSection'
 /**
  * Home page — just the section order.
  *
@@ -27,7 +27,7 @@ export default function Home() {
         <WhatWeOffer />
         <Testimonials />
         <Faq />
-        <Contact />
+        <ContactSection />
         <MapSection />
       </main>
 
