@@ -21,7 +21,7 @@ export default function About() {
         <Faq />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }

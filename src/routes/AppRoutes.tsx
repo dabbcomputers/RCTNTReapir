@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Faq from '../pages/Faq'
+import Gallery from '../pages/Gallery'
 import Home from '../pages/Home'
 import NotFound from '../pages/NotFound'
 import Services from '../pages/Services'
@@ -23,6 +24,7 @@ export default function AppRoutes() {
       <Route path="/testimonials" element={<Testimonials />} />
       <Route path="/faq" element={<Faq />} />
       <Route path="/contacts" element={<Contact />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   )

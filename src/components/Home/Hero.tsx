@@ -37,6 +37,25 @@ function PhoneIcon({ className = 'h-5 w-5' }: { className?: string }) {
   )
 }
 
+// Small downward chevron for the scroll cue under the hero headline.
+function ChevronDownIcon({ className = 'h-5 w-5' }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <path d="M6 9.5l6 6 6-6" />
+    </svg>
+  )
+}
+
 // ─── ASSET SLOT ──────────────────────────────────────────────────────────────
 // Background photo behind the headline.
 // Put the file at: public/assets/images/hero.jpg
@@ -83,7 +102,7 @@ export default function Hero() {
           className="text-foreground/60 hover:text-primary focus-visible:outline-primary mt-16 inline-flex flex-col items-center gap-3 text-[10px] font-semibold tracking-[0.34em] uppercase transition-colors focus-visible:outline-2 focus-visible:outline-offset-4"
         >
           {hero.scrollLabel}
-          <span aria-hidden="true" className="bg-primary block h-10 w-px" />
+          <ChevronDownIcon className="text-primary animate-scroll-cue h-5 w-5" />
         </a>
       </div>
 

@@ -25,6 +25,29 @@
   --color-border: #333333;
 
   --container-width: 1200px;
+
+  /* Hero scroll cue. Starts as soon as the arrow mounts and gently repeats, so
+     the arrow reads as "scroll this way" rather than as decoration. */
+  --animate-scroll-cue: scroll-cue 1.7s ease-in-out infinite;
+}
+
+@keyframes scroll-cue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 1;
+  }
+}
+
+/* Honour a reduced-motion preference — the cue is purely decorative. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-cue {
+    animation: none;
+  }
 }
 
 html {

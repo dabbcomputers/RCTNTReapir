@@ -16,7 +16,7 @@ export default function Contact() {
         <ContactSection />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }

@@ -17,7 +17,7 @@ export default function Services() {
         <OurServices />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }

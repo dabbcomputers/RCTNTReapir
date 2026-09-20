@@ -17,7 +17,7 @@ export default function NotFound() {
         <NotFoundContent />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }

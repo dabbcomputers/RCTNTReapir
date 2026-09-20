@@ -19,7 +19,7 @@ export default function Faq() {
         <FaqList />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }

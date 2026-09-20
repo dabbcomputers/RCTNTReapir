@@ -20,7 +20,7 @@ export default function Testimonials() {
         <TestimonialGrid />
       </main>
 
-      <Footer showNewsletter={false} />
+      <Footer />
     </>
   )
 }
