@@ -1,0 +1,43 @@
+<!doctype html>
+<!--
+  Static form skeletons for Netlify's build-time form detection.
+
+  Netlify parses the DEPLOYED HTML, but this site's forms are rendered
+  client-side by React, so they are invisible to that scan. This file is not
+  linked from anywhere and is never shown to a user; it exists only so the
+  build discovers each form name together with its field names. Submissions
+  themselves are sent from JS with fetch (see src/lib/netlifyForms.ts).
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form definitions</title>
+  </head>
+  <body hidden>
+    <form name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="quote-request" />
+      <input name="bot-field" />
+      <input name="fullName" />
+      <input name="phone" />
+      <input name="towFrom" />
+      <input name="towTo" />
+      <input name="vehicleType" />
+      <input name="date" />
+    </form>
+
+    <form name="newsletter" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="newsletter" />
+      <input name="bot-field" />
+      <input name="email" />
+    </form>
+
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="name" />
+      <input name="email" />
+      <input name="phone" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — values sampled from design-references/*.png with the
+ * exact-colour histogram (/tmp/rtprobe/palette), not eyeballed.
+ *
+ *   #FFC329  8.32% of footer, 4.04% of hero  -> primary accent
+ *   #F5BB27  1.07% of footer                 -> accent pressed/hover twin
+ *   #232323  64.20% of footer                -> surface
+ *   #181818  16.37% of footer                -> deepest background
+ *   #1D1D1D  14.81% of hero                  -> page background
+ *   #3C3C3C  10.60% of stats                 -> raised surface / band
+ */
+@theme {
+  --color-background: #1d1d1d;
+  --color-background-deep: #181818;
+  --color-surface: #232323;
+  --color-surface-raised: #3c3c3c;
+
+  --color-primary: #ffc329;
+  --color-primary-strong: #f5bb27;
+
+  --color-foreground: #ffffff;
+  --color-muted: #9a9a9a;
+  --color-border: #333333;
+
+  --container-width: 1200px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
